@@ -19,5 +19,8 @@ app.post('/check-postcode', async (req, res) => {
   }
 });
 
+app.get('/',async (req, res) => {
+  res.send("Welcome to SH24")
+})
 const PORT = 3000;
 app.listen(PORT, () => console.log(`API running at http://localhost:${PORT}`));

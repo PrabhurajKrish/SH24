@@ -8,15 +8,21 @@ function normalize(postcode) {
 }
 
 async function isPostcodeServable(postcode) {
+  console.log(postcode);
+  
   const normalized = normalize(postcode);
-  if (MANUALLY_ALLOWED.includes(postcode.toUpperCase())) {
-    return { allowed: true, reason: 'Manually allowed postcode' };
-  }
+  // if (MANUALLY_ALLOWED.includes(postcode.toUpperCase())) {
+  //   return { allowed: true, reason: 'Manually allowed postcode' };
+  // }
 
   try {
+    console.log(normalized);
+    
     const response = await axios.get(`https://api.postcodes.io/postcodes/${normalized}`);
-    const lsoa = response.data.result?.lsoa;
+    console.log(response);
 
+    const lsoa = response.data.result?.lsoa;
+    
     if (lsoa && ALLOWED_LSOA_PREFIXES.some(prefix => lsoa.startsWith(prefix))) {
       return { allowed: true, reason: `Postcode is in allowed LSOA: ${lsoa}` };
     }
