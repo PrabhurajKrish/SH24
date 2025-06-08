@@ -1,0 +1,11 @@
+<div class="upload-csv">
+  <h2>Upload CSV File</h2>
+
+  <label for="type">Select CSV Type:</label>
+  <select id="type" [(ngModel)]="selectedType">
+    <option *ngFor="let t of types" [value]="t">{{ t }}</option>
+  </select>
+
+  <br /><br />
+  <input type="file" (change)="onFileSelected($event)" accept=".csv" />
+</div>

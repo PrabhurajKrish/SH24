@@ -1,0 +1,37 @@
+.postcode-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.postcode-input {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.postcode-input:focus {
+  border-color: #007bff;
+}
+
+.postcode-button {
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.postcode-button:hover {
+  background-color: #0056b3;
+}

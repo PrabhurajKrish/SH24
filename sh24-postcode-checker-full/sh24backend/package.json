@@ -1,0 +1,21 @@
+{
+  "name": "postcode-checker-backend",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+  "test": "jasmine"
+},
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "multer": "^2.0.1"
+  },
+  "devDependencies": {
+    "jasmine": "^5.8.0",
+    "jasmine-node": "^3.0.0",
+    "jest": "^29.0.0",
+    "supertest": "^7.1.1"
+  }
+}

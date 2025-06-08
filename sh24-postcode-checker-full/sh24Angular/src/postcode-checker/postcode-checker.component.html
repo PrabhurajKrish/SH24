@@ -1,0 +1,10 @@
+<form class="postcode-form" (submit)="checkPostcode(); $event.preventDefault()">
+  <input
+    class="postcode-input"
+    [(ngModel)]="postcode"
+    name="postcode"
+    placeholder="Enter UK postcode"
+  >
+  <button class="postcode-button" type="submit">Check</button>
+</form>
+

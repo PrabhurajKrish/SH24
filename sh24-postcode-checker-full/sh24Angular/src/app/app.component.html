@@ -1,0 +1,8 @@
+<h1>
+  {{ title }} |
+  <a *ngIf="isNotUploadPage()" routerLink="/">Home</a>
+  <a *ngIf="!isNotUploadPage()" routerLink="/upload">Upload</a>
+</h1>
+
+
+<router-outlet></router-outlet>
